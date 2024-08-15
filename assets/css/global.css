@@ -1,0 +1,35 @@
+:root {
+    --black : #2d3436;
+    --red : #d63031;
+    --white: #ffffff;
+    --day-color:  #eeedfb; 
+    --night-color:  #2d3436; 
+    --gray  : #ddd;
+    --focus : #b0abfa;
+    --select : #6c5ce7;
+    --background-select : #bab5ff;
+    --button : #8e44ad;
+}
+
+@font-face {
+    font-family: 'Karla-Regular';
+    src: url('/assets/fonts/static/Karla-Regular.ttf');
+}
+
+* {
+    color: var(--black) ;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Karla-Regular';
+}
+
+body {
+    max-width: 1000%;
+    margin: auto;
+    background-color: var(--day-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
