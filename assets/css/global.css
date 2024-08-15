@@ -4,6 +4,8 @@
     --white: #ffffff;
     --day-color:  #eeedfb; 
     --night-color:  #2d3436; 
+    --body-color-day :rgb(255, 255, 255) ;
+    --body-color-night :rgb(94, 94, 94) ;
     --gray  : #ddd;
     --focus : #b0abfa;
     --select : #6c5ce7;
@@ -16,6 +18,36 @@
     src: url('/assets/fonts/static/Karla-Regular.ttf');
 }
 
+
+
+/* NIGHT MODE */
+/* * {
+    color: var(--white) ;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Karla-Regular';
+}
+
+body {
+    max-width: 1000%;
+    margin: auto;
+    background-color: var(--body-color-night);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.contact-us {
+    background-color: var(--night-color);
+} */
+
+
+
+
+
+/* DAY MODE */
 * {
     color: var(--black) ;
     padding: 0;
@@ -27,9 +59,14 @@
 body {
     max-width: 1000%;
     margin: auto;
-    background-color: var(--day-color);
+    background-color: var(--body-color-day);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 100px;
+}
+
+
+.contact-us {
+    background-color: var(--day-color);
 }
