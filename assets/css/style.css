@@ -10,15 +10,15 @@
     display: inline-block;
     width: 3.5em;
     height: 2em;
-  }
-  
-  .switch input {
+}
+
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  .slider {
+}
+
+.slider {
     --background: var(--button);
     position: absolute;
     cursor: pointer;
@@ -29,9 +29,9 @@
     background-color: var(--background);
     transition: .5s;
     border-radius: 30px;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 1.4em;
@@ -42,16 +42,16 @@
     box-shadow: inset 8px -4px 0px 0px #fff000;
     background: var(--background);
     transition: .5s;
-  }
-  
-  input:checked + .slider {
+}
+
+input:checked+.slider {
     background-color: var(--select);
-  }
-  
-  input:checked + .slider:before {
+}
+
+input:checked+.slider:before {
     transform: translateX(100%);
     box-shadow: inset 15px -4px 0px 15px #fff000;
-  }
+}
 
 
 
@@ -67,6 +67,13 @@ h2 {
     margin-bottom: 20px;
 }
 
+
+.error {
+    color: var(--red);
+}
+
+
+
 .label::after {
     content: "*";
     color: var(--red);
@@ -81,6 +88,12 @@ h2 {
 
 .section-query {
     margin-top: 0px;
+}
+
+
+.section-message {
+    display: flex;
+    flex-direction: column;
 }
 
 .first-name {
@@ -229,4 +242,12 @@ button {
 
 button:hover {
     opacity: .8;
+}
+
+.input-group.success input{
+    border-color: #0cc477;
+}
+
+.input-group.error input{
+    border-color:rgb(206, 67, 67);
 }

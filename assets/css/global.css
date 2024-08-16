@@ -15,7 +15,7 @@
 
 
 @font-face {
-    font-family: 'Karla-Regular';
+    font-family: 'Karla-Regular' ,Arial, Helvetica, sans-serif;
     src: url('/assets/fonts/static/Karla-Regular.ttf');
 }
 
