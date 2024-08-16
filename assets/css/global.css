@@ -11,11 +11,12 @@
     --select : #6c5ce7;
     --background-select : #bab5ff;
     --button : #8e44ad;
+    --green : #16a085;
 }
 
 
 @font-face {
-    font-family: 'Karla-Regular' ,Arial, Helvetica, sans-serif;
+    font-family: 'Karla-Regular';
     src: url('/assets/fonts/static/Karla-Regular.ttf');
 }
 

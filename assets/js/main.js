@@ -9,16 +9,27 @@ const support = document.getElementById('color-2')
 const message = document.getElementById('message')
 const check = document.getElementById('check')
 const sectionQuery = document.querySelector('.query')
+const alertSuccess = document.querySelector('.alert-success')
+const alertFailed = document.querySelector('.alert-failed')
 
 
 
 form.addEventListener('submit', (e) => {
-    console.log(check.checked, support.checked, general.checked);
     if (!validateInputs()) {
         e.preventDefault();
+    } else if (validateInputs) {
+        e.preventDefault();
+        showSuccess()
     }
 })
 
+const showSuccess = () => {
+    alertSuccess.style.display = "block"
+    setTimeout(() => {
+        alertSuccess.style.display = "none"
+        window.location.reload(false);
+    }, 1500)
+}
 
 const validateInputs = () => {
     const fnameVal = fname.value.trim()
@@ -62,11 +73,9 @@ const validateInputs = () => {
     } else {
         setSuccess(message)
     }
-
-
     if (checkVal == false) {
         success = false
-        setError(check, "This field is required")
+        setError(check, "To submit this form , please consent to being contacted")
     } else {
         setSuccess(check)
     }
@@ -77,12 +86,12 @@ const validateInputs = () => {
     } else {
         setSuccess(sectionQuery)
     }
+
+    return success
 }
 
-
-
-
 const setError = (element, message) => {
+    console.log(element)
     const inputGroup = element.parentElement;
     const errorElement = inputGroup.querySelector('.error')
 
@@ -95,7 +104,6 @@ const setError = (element, message) => {
 function setSuccess(element) {
     const inputGroup = element.parentElement;
     const errorElement = inputGroup.querySelector('.error')
-
     errorElement.innerText = '';
     inputGroup.classList.add('success')
     inputGroup.classList.remove('error')
@@ -108,11 +116,13 @@ const modeHandler = () => {
         star.style.backgroundColor = "#485460"
         contact.style.backgroundColor = "#2d3436"
         contact.style.boxShadow = "-2px 7px 16px 5px #fff"
+        label.style.color = "white"
     } else {
         star.style.color = "black"
         star.style.backgroundColor = "#f1f2f6"
         contact.style.backgroundColor = "#eeedfb"
         contact.style.boxShadow = "-2px 7px 16px 5px black"
+        label.style.color = "black"
     }
 }
 
@@ -125,88 +135,37 @@ const validateEmail = (email) => {
         );
 };
 
+fname.addEventListener('paste', function (event) {
+    event.preventDefault();
+    alertFailed.style.display = "block"
+    setTimeout(() => {
+        alertFailed.style.display = "none"
+    }, 1500);
+});
+
+lname.addEventListener('paste', function (event) {
+    event.preventDefault();
+    alertFailed.style.display = "block"
+    setTimeout(() => {
+        alertFailed.style.display = "none"
+    }, 1500);
+});
+
+email.addEventListener('paste', function (event) {
+    event.preventDefault();
+    alertFailed.style.display = "block"
+    setTimeout(() => {
+        alertFailed.style.display = "none"
+    }, 1500);
+});
+
+message.addEventListener('paste', function (event) {
+    event.preventDefault();
+    alertFailed.style.display = "block"
+    setTimeout(() => {
+        alertFailed.style.display = "none"
+    }, 1500);
+});
+
+
 mode.addEventListener("click", modeHandler)
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const button = document.querySelector('button')
-// const mode = document.getElementById('mode')
-// const star = document.querySelector('body')
-// const contact = document.getElementById('contact')
-// const alertfname = document.getElementById('alertfname')
-// const alertlname = document.getElementById('alertlname')
-// const alertemail = document.getElementById('alertemail')
-// const input = document.querySelectorAll(".input")
-// const email = document.getElementById('email')
-// const fname = document.getElementById('fname')
-// const lname = document.getElementById('lname')
-
-
-// const showAlert = (message, alertname) => {
-//     alertfname.innerHTML = ""
-//     alertlname.innerHTML = ""
-//     alertemail.innerHTML = ""
-//     const alert = document.createElement("p")
-//     alert.innerText = message
-//     alert.classList.add("alert")
-//     alertname.append(alert)
-// }
-
-
-// const buttonHandler = () => {
-//     const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/
-//     const res = emailRegex.test(email.value)
-//     if (!res) {
-//         showAlert("Please enter a valid email address", alertemail)
-//         email.classList.add("input-add")
-//     } else if (!fname.value.trim()) {
-//         showAlert("This field is required", alertfname)
-//         fname.classList.add("input-add")
-//     } else {
-//         email.classList.remove("input-add")
-//         fname.classList.remove("input-add")
-//         showAlert("")
-//     }
-
-// }
-
-
-// const modeHandler = () => {
-//     if (!mode.checked) {
-//         star.style.color = "white"
-//         star.style.backgroundColor = "#485460"
-//         contact.style.backgroundColor = "#2d3436"
-//         contact.style.boxShadow = "-2px 7px 16px 5px #fff"
-//     } else {
-//         star.style.color = "black"
-//         star.style.backgroundColor = "#f1f2f6"
-//         contact.style.backgroundColor = "#eeedfb"
-//         contact.style.boxShadow = "-2px 7px 16px 5px black"
-//     }
-// }
-
-// // const inputAlert = event => {
-// //     if (!event.target.value) {
-// //         event.target.classList.add("input-add")
-// //         showAlert("This field is required")
-// //     } else {
-// //         event.target.classList.remove("input-add")
-// //         showAlert("")
-// //     }
-// // }
-
-// // input.forEach(x => {
-// //     x.addEventListener("click", inputAlert)
-// // })
-// mode.addEventListener("click", modeHandler)
-// button.addEventListener('click', buttonHandler)

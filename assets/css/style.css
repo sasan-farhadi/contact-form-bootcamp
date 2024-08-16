@@ -3,7 +3,6 @@
     justify-content: space-between;
 }
 
-
 .switch {
     font-size: 17px;
     position: relative;
@@ -53,14 +52,40 @@ input:checked+.slider:before {
     box-shadow: inset 15px -4px 0px 15px #fff000;
 }
 
-
-
 .contact-us {
     height: auto;
     width: 900px;
     border-radius: 10px;
-    padding: 40px;
+    padding: 40px 40px 40px 42px;
     box-shadow: -2px 7px 16px 5px var(--black);
+}
+
+.alert-success { 
+    width: 500px;
+    height: auto;
+    background: var(--green);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: var(--white);
+    position: absolute;
+    top: 60px;
+    left: 700px;
+    display: none;
+}
+
+.alert-failed {
+    width: 500px;
+    height: auto;
+    background: var(--red);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: var(--white);
+    position: absolute;
+    top: 60px;
+    left: 700px;
+    display: none;
 }
 
 h2 {
@@ -72,7 +97,9 @@ h2 {
     color: var(--red);
 }
 
-
+.label {
+    margin-top: 25px;
+}
 
 .label::after {
     content: "*";
@@ -82,12 +109,19 @@ h2 {
 }
 
 .section {
-    display: flex;
-    margin: 20px 0 20px 0;
+    margin: 25px 0 25px 0;
+}
+
+.section-information {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .section-query {
     margin-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
 }
 
 
@@ -97,16 +131,15 @@ h2 {
 }
 
 .first-name {
-    width: 50%;
+    width: 98%;
 }
 
 .last-name {
-    width: 50%;
-    margin-left: 20px;
+    width: 98%;
 }
 
 .input {
-    width: 100%;
+    width: 98%;
     height: 40px;
     border-radius: 10px;
     border: 1px solid var(--gray);
@@ -136,7 +169,7 @@ h2 {
     padding: 5px;
     border-radius: 10px;
     display: flex;
-    width: 50%;
+    width: 96%;
     height: 40px;
     border: 1px solid var(--gray);
     margin: 7px 0 0 0;
@@ -202,13 +235,25 @@ h2 {
     opacity: 1;
 }
 
-.support {
-    margin-left: 20px;
+
+.input-group.success input {
+    border-color: #0cc477;
 }
 
+.input-group.error input {
+    border-color: rgb(206, 67, 67);
+}
+
+.input-group.success textarea {
+    border-color: #0cc477;
+}
+
+.input-group.error textarea {
+    border-color: rgb(206, 67, 67);
+}
 
 textarea {
-    width: 100%;
+    width: 98%;
     height: 150px;
     resize: none;
     border-radius: 10px;
@@ -228,7 +273,7 @@ textarea:focus {
 }
 
 button {
-    width: 100%;
+    width: 98%;
     height: 60px;
     font-size: 1.1rem;
     font-weight: bold;
@@ -244,10 +289,14 @@ button:hover {
     opacity: .8;
 }
 
-.input-group.success input{
-    border-color: #0cc477;
+
+.accept {
+    position: relative;
 }
 
-.input-group.error input{
-    border-color:rgb(206, 67, 67);
+
+.accept label {
+    position: absolute;
+    top: 0;
+    left: 35px;
 }

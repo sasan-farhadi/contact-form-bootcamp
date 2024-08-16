@@ -13,6 +13,13 @@
 <body>
   <div>
     <div class="container">
+      <div class="alert-success">
+        <h3>Message sent!</h3>
+        <p>Thanks for completing the form , we'll be in touch soon!</p>
+      </div>
+      <div class="alert-failed">
+        <h3>You can't paste, just type!</h3>
+      </div>
       <form action="" id="form">
         <div id="contact" class="contact-us">
           <div class="title">
@@ -26,23 +33,26 @@
               </label>
             </div>
           </div>
-          <div class="section">
+          <div class="section-information">
+            <label class="label" for="fname">First Name</label>
+            <label class="label last-name" for="lname">Last Name</label>
+          </div>
+          <div class="section-information">
             <div class="first-name input-group">
-              <label class="label" for="fname">First Name</label>
               <input type="text" name="fname" class="input" id="fname">
               <div class="error"></div>
               <div id="alertfname"></div>
             </div>
+
             <div class="last-name input-group">
-              <label class="label" for="lname">Last Name</label>
               <input type="text" name="lname" class="input" id="lname">
               <div class="error"></div>
             </div>
           </div>
 
           <div class="section email">
+            <label class="label" for="email">Email Address</label>
             <div class="input-email input-group">
-              <label class="label" for="email">Email Address</label>
               <input type="text" name="email" class="input" id="email">
               <div class="error"></div>
             </div>
@@ -52,7 +62,7 @@
 
           <label class="label" for="">Query Type</label>
           <div class="section section-query ">
-            <div class="radio-input query " >
+            <div class="radio-input query">
               <input name="color" id="color-1" type="radio">
               <label for="color-1"><span>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -68,8 +78,8 @@
                 </span>General Enquiry</label>
             </div>
 
-            <div class="radio-input support">
-              <input  name="color" id="color-2" type="radio">
+            <div class="radio-input">
+              <input name="color" id="color-2" type="radio">
               <label for="color-2"><span>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
@@ -82,27 +92,27 @@
                     </g>
                   </svg>
                 </span>Support Request</label>
-              </div>
-              <div class="error"></div>
             </div>
+            <div class="error"></div>
+          </div>
 
           <label class="label" for="">Message</label>
-          <div class="section section-query section-message ">
+          <div class=" section-message textarea input-group">
             <textarea name="message" id="message"></textarea>
             <div class="error"></div>
           </div>
 
-          <div class="section">
-            <input class="input-check" type="checkbox" name="check" id="check">
-            <label class="label" for="check">I consent to being contacted by the team</label>
-            <div class="error"></div>
+          <div class="accept">
+            <div class="section">
+              <input class="input-check" type="checkbox" name="check" id="check">
+              <div class="error"></div>
+            </div>
+            <label for="check">I consent to being contacted by the team</label>
           </div>
-
 
           <div class="section">
             <button type="submit">Submit</button>
           </div>
-        </div>
       </form>
     </div>
   </div>
