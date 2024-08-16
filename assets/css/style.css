@@ -125,7 +125,6 @@ h2 {
     gap: 0;
 }
 
-
 .section-message {
     display: flex;
     flex-direction: column;
@@ -300,4 +299,8 @@ button:hover {
     position: absolute;
     top: 0;
     left: 35px;
+}
+
+.input-group input::placeholder {
+    opacity: 0;
 }

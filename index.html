@@ -7,6 +7,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./assets/css/global.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/mobile.css" media="(max-width:767px)" />
+  <link rel="stylesheet" href="./assets/css/tablet.css" media="(min-width:768px) and (max-width:990px)" />
   <title>Contact form | SasanFarhadi</title>
 </head>
 
@@ -29,24 +31,24 @@
             </div>
             <div class="mode">
               <label class="switch">
-                <input id="mode" type="checkbox" value="" >
+                <input id="mode" type="checkbox" value="">
                 <span class="slider"></span>
               </label>
             </div>
           </div>
-          <div class="section-information">
+          <div class="section-information label-information">
             <label class="label" for="fname">First Name</label>
             <label class="label last-name" for="lname">Last Name</label>
           </div>
           <div class="section-information">
             <div class="first-name input-group">
-              <input type="text" name="fname" class="input" id="fname">
+              <input type="text" name="fname" class="input" id="fname"  placeholder="First Name">
               <div class="error"></div>
               <div id="alertfname"></div>
             </div>
 
             <div class="last-name input-group">
-              <input type="text" name="lname" class="input" id="lname">
+              <input type="text" name="lname" class="input" id="lname"  placeholder="Last Name">
               <div class="error"></div>
             </div>
           </div>
@@ -54,7 +56,7 @@
           <div class="section email">
             <label class="label" for="email">Email Address</label>
             <div class="input-email input-group">
-              <input type="text" name="email" class="input" id="email">
+              <input type="text" name="email" class="input" id="email" placeholder="Email Address">
               <div class="error"></div>
             </div>
           </div>

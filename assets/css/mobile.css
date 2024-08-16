@@ -1,0 +1,89 @@
+.title {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.section-information {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.section-query {
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+}
+
+
+.contact-us {
+    width: 400px;
+    text-align: center;
+}
+
+.alert-success {
+    width: 200px;
+    top: 0;
+    left: 230px;
+    display: none;
+}
+
+.alert-success h3 {
+    font-size: 1rem;
+}
+
+.alert-success p {
+    font-size: .7rem;
+    margin-top: 5px;
+}
+
+
+.alert-failed {
+    width: 200px;
+    top: 0;
+    left: 230px;
+    display: none;
+}
+
+.alert-failed h3 {
+    font-size: .8rem;
+}
+
+.alert-failed p {
+    font-size: .6rem;
+    margin-top: 5px;
+}
+
+
+
+.accept label {
+    top: 0;
+    left: 30px;
+}
+
+.accept {
+    text-align: left;
+}
+
+.error {
+    font-size: .8rem;
+}
+
+.label-information {
+    display: none;
+}
+.email label {
+    display: none;
+}
+.section-information {
+    margin-top: 30px;
+}
+
+.accept .error {
+    margin-top: 30px;
+}
+
+
+.input-group input::placeholder {
+    opacity: 1;
+}

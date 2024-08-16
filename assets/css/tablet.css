@@ -1,0 +1,32 @@
+.title {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.contact-us {
+    width: 600px;
+    text-align: center;
+}
+
+.alert-success {
+    width: 300px;
+    top: 0;
+    left: 250px;
+    display: none;
+}
+
+.alert-failed {
+    width: 300px;
+    top: 0;
+    left: 250px;
+    display: none;
+}
+
+.accept label {
+    top: 0;
+    left: 30px;
+}
+
+.accept {
+    text-align: left;
+}

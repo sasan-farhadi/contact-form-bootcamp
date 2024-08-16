@@ -138,7 +138,7 @@ email.addEventListener('paste', function (event) {
     alertFailed.style.display = "block"
     setTimeout(() => {
         alertFailed.style.display = "none"
-    }, 1500);
+    }, 2500);
 });
 
 message.addEventListener('paste', function (event) {
