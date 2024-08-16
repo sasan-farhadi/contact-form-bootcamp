@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./assets/css/global.css">
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -14,80 +13,97 @@
 <body>
   <div>
     <div class="container">
-      <div class="contact-us">
-        <h2>Contact Us</h2>
-        <div class="section">
-          <div class="first-name">
-            <label class="label" for="fname">First Name</label>
-            <input type="text" class="input" id="fname" required>
+      <form action="" id="form">
+        <div id="contact" class="contact-us">
+          <div class="title">
+            <div>
+              <h2>Contact Us</h2>
+            </div>
+            <div>
+              <label class="switch">
+                <input id="mode" type="checkbox" value="" checked="">
+                <span class="slider"></span>
+              </label>
+            </div>
           </div>
-          <div class="last-name">
-            <label class="label" for="lname">Last Name</label>
-            <input type="text" class="input" id="lname">
+          <div class="section">
+            <div class="first-name">
+              <label class="label" for="fname">First Name</label>
+              <input type="text" name="fname" class="input" id="fname">
+              <div id="alertfname"></div>
+            </div>
+            <div class="last-name">
+              <label class="label" for="lname">Last Name</label>
+              <input type="text" name="lname" class="input" id="lname">
+              <div id="alertlname"></div>
+            </div>
           </div>
-        </div>
 
-        <div class="section email">
-          <div class="input-email">
-            <label class="label" for="email">Email Address</label>
-            <input type="email" class="input" id="email">
+          <div class="section email">
+            <div class="input-email">
+              <label class="label" for="email">Email Address</label>
+              <input type="text" name="email" class="input" id="email">
+              <div id="alertemail"></div>
+            </div>
           </div>
-        </div>
 
 
 
-        <label class="label" for="">Query Type</label>
-        <div class="section section-query">
-          <div class="radio-input ">
-            <input checked="" value="color-1" name="color" id="color-1" type="radio">
-            <label for="color-1"><span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
-                  <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <g id="Interface / Check">
-                      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="black"
-                        d="M6 12L10.2426 16.2426L18.727 7.75732" id="Vector"></path>
+          <label class="label" for="">Query Type</label>
+          <div class="section section-query">
+            <div class="radio-input ">
+              <input name="color" id="color-1" type="radio">
+              <label for="color-1"><span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                    <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <g id="Interface / Check">
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="black"
+                          d="M6 12L10.2426 16.2426L18.727 7.75732" id="Vector"></path>
+                      </g>
                     </g>
-                  </g>
-                </svg>
-              </span>General Enquiry</label>
-          </div>
-          <div class="radio-input support">
-            <input value="color-2" name="color" id="color-2" type="radio">
-            <label for="color-2"><span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
-                  <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <g id="Interface / Check">
-                      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="black"
-                        d="M6 12L10.2426 16.2426L18.727 7.75732" id="Vector"></path>
+                  </svg>
+                </span>General Enquiry</label>
+            </div>
+            <div class="radio-input support">
+              <input name="color" id="color-2" type="radio">
+              <label for="color-2"><span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                    <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <g id="Interface / Check">
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="black"
+                          d="M6 12L10.2426 16.2426L18.727 7.75732" id="Vector"></path>
+                      </g>
                     </g>
-                  </g>
-                </svg>
-              </span>Support Request</label>
+                  </svg>
+                </span>Support Request</label>
+            </div>
+          </div>
+
+          <label class="label" for="">Message</label>
+          <div class="section section-query">
+            <textarea name="message" id="message"></textarea>
+          </div>
+
+          <div class="section">
+            <input class="input-check" type="checkbox" name="check" id="check">
+            <label class="label" for="check">I consent to being contacted by the team</label>
+          </div>
+          
+
+          <div class="section">
+            <button>Submit</button>
           </div>
         </div>
-
-
-        <label class="label" for="">Message</label>
-        <div class="section section-query">
-          <textarea name="message" id="message"></textarea>
-        </div>
-
-        <div class="section">
-          <input class="input-check" type="checkbox" name="check" id="check">
-          <label class="label" for="check">I consent to being contacted by the team</label>
-        </div>
-
-        <div class="section">
-          <button>Submit</button>
-        </div>
-      </div>
+      </form>
     </div>
   </div>
   </div>
+
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
