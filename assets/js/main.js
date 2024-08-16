@@ -109,24 +109,6 @@ function setSuccess(element) {
     inputGroup.classList.remove('error')
 }
 
-
-const modeHandler = () => {
-    if (!mode.checked) {
-        star.style.color = "white"
-        star.style.backgroundColor = "#485460"
-        contact.style.backgroundColor = "#2d3436"
-        contact.style.boxShadow = "-2px 7px 16px 5px #fff"
-        label.style.color = "white"
-    } else {
-        star.style.color = "black"
-        star.style.backgroundColor = "#f1f2f6"
-        contact.style.backgroundColor = "#eeedfb"
-        contact.style.boxShadow = "-2px 7px 16px 5px black"
-        label.style.color = "black"
-    }
-}
-
-
 const validateEmail = (email) => {
     return String(email)
         .toLowerCase()
@@ -164,8 +146,49 @@ message.addEventListener('paste', function (event) {
     alertFailed.style.display = "block"
     setTimeout(() => {
         alertFailed.style.display = "none"
-    }, 1500);
+    }, 2500);
 });
 
 
+const modeHandler = () => {
+    localStorage.setItem("mode", mode.checked)
+    if (!mode.checked) {
+        star.style.color = "white"
+        star.style.backgroundColor = "#485460"
+        contact.style.backgroundColor = "#2d3436"
+        contact.style.boxShadow = "-2px 7px 16px 5px #fff"
+        label.style.color = "white"
+    } else {
+        star.style.color = "black"
+        star.style.backgroundColor = "#f1f2f6"
+        contact.style.backgroundColor = "#eeedfb"
+        contact.style.boxShadow = "-2px 7px 16px 5px black"
+        label.style.color = "black"
+    }
+}
+
+const loadHandler = () => {
+    const modeStatus = localStorage.getItem("mode")
+    if (modeStatus === 'true') {
+        mode.checked = true
+    } else if (modeStatus === 'false') {
+        mode.checked = false
+    }
+
+    if (!mode.checked) {
+        star.style.color = "white"
+        star.style.backgroundColor = "#485460"
+        contact.style.backgroundColor = "#2d3436"
+        contact.style.boxShadow = "-2px 7px 16px 5px #fff"
+        label.style.color = "white"
+    } else {
+        star.style.color = "black"
+        star.style.backgroundColor = "#f1f2f6"
+        contact.style.backgroundColor = "#eeedfb"
+        contact.style.boxShadow = "-2px 7px 16px 5px black"
+        label.style.color = "black"
+    }
+}
+
+window.addEventListener("load", loadHandler)
 mode.addEventListener("click", modeHandler)
